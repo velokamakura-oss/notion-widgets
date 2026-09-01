@@ -2,13 +2,39 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Like Button Test</title>
+  <title>My Like Button</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #btn {
+      font-size: 40px;
+      cursor: pointer;
+      user-select: none;
+    }
+    #count {
+      font-size: 30px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Notion Like Button Test</h1>
-  <iframe src="https://embed.lyket.dev/like/velokamakura/VK000"
-          width="300"
-          height="100"
-          frameborder="0"></iframe>
+
+  <div id="btn">❤️</div>
+  <div id="count">0</div>
+
+  <script>
+    let count = 0;
+    const btn = document.getElementById("btn");
+    const countDisplay = document.getElementById("count");
+
+    btn.addEventListener("click", () => {
+      count++;
+      countDisplay.textContent = count;
+    });
+  </script>
+
 </body>
 </html>
